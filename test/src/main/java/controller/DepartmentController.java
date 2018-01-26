@@ -36,7 +36,8 @@ public class DepartmentController {
 
 	@Resource(name = "userService")
 	private UserService userService;
-	
+
+
 	@RequestMapping("/list")
 	public ModelAndView list(@RequestParam(value="page",required=false)String page,Department s_department,HttpServletRequest request){
 		ModelAndView mav=new ModelAndView();
