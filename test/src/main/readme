@@ -1,0 +1,8 @@
+1、项目启动
+（1）导入dubbo-admin、test-dubbo-provider、test-dubbo-interface、test-dubbo-consumer、test(该测试项目为Spring MVC项目，如需要可导入)
+（2）首先启动test-dubbo-provider项目src目录下test中的start.java类
+（3）之后启动test-dubbo-consumer项目src目录下test中的MyTEst.java类（若要使用web启动，则把test项目添加到Tomcat下启动，然后在浏览器中输入http://localhost:8080/tan-springmvc-book访问页面）
+（4）此时若要观察消费者和提供者等信息，可以将dubbo-admin添加到Tomcat下启动，在浏览器中输入http://localhost:8080/dubbo-admin进入dubbo管控台，用户名密码默认为root
+2、注意事项：
+（1）启动dubbo-admin的时候记得先启动zookeeper,控制台进到zookeper安装目录bin目录下，使用命令zkServer.sh status查看ZK服务状态，zkServer.sh start启动服务，zkServer.sh stop 停止服务，zkServer.sh restart 重启服务
+（2）zookeeper注册中心暴露服务地址修改，在test-dubbo-provider项目resource目录下的ApplicationContext-dubbo.xml中
